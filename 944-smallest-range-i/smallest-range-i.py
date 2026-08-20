@@ -5,8 +5,8 @@ class Solution(object):
         :type k: int
         :rtype: int
         """
-        v1=max(nums)-k
-        v2=min(nums)+k 
-        if v2>v1:
-            v1+=v2-v1
-        return abs(v1-v2)       
+        min_val = min(nums)
+        max_val = max(nums)
+        
+     
+        return max(0, max_val - min_val - 2 * k)      
