@@ -8,8 +8,9 @@ class Solution(object):
         if len(nums)<2:
             return 0
         nums.sort()
+        diff=0
         for i in range(1,len(nums)):
-            k.append(abs(nums[i]-nums[i-1]))
-        k.sort()
-        return k[-1]
+            if nums[i]-nums[i-1]>diff:
+                diff=nums[i]-nums[i-1]
+        return diff
         
