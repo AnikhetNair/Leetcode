@@ -6,5 +6,5 @@ class Solution(object):
         :type maxWeight: int
         :rtype: int
         """
-        return min(n*n,maxWeight//w)
+        return int(min(n*n,maxWeight/w))
         
